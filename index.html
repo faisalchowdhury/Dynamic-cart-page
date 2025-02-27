@@ -26,14 +26,14 @@
 </head>
 </head>
 
-<body class="josefin-sans-ecom">
+<body class="josefin-sans-ecom ">
 
     <main class="min-h-dvh my-10">
         <section class="max-w-lg md:max-w-4xl mx-auto">
             <div class="cart-content-wrapper grid lg:grid-cols-2 gap-8 ">
 
                 <div class="">
-                    <img class="w-full h-[570px] rounded-lg" src="assets/6.jpg" alt="">
+                    <img id="product-img" class="w-full h-[570px] rounded-lg" src="assets/1.jpg" alt="">
                 </div>
 
                 <div class="space-y-5">
@@ -76,10 +76,10 @@
                     <div class="color-wrapper space-y-3">
                         <p class="font-bold">Color</p>
                         <div class="colors">
-                            <span class="w-6 h-6 bg-[#16232B] inline-block rounded-full"></span>
-                            <span class="w-6 h-6 bg-[#727070] inline-block rounded-full"></span>
-                            <span class="w-6 h-6 bg-[#EDEBDF] inline-block rounded-full"></span>
-                            <span class="w-6 h-6 bg-[#D7D7DE] inline-block rounded-full"></span>
+                            <span class="choose-color w-6 h-6 bg-[#16232B] inline-block rounded-full"></span>
+                            <span class="choose-color w-6 h-6 bg-[#727070] inline-block rounded-full"></span>
+                            <span class="choose-color w-6 h-6 bg-[#EDEBDF] inline-block rounded-full"></span>
+                            <span class="choose-color w-6 h-6 bg-[#D7D7DE] inline-block rounded-full"></span>
                         </div>
 
                     </div>
@@ -102,7 +102,7 @@
                             <span>+</span>
                         </div>
 
-                        <button class="cursor-pointer bg-orange-400 px-5 py-3 rounded-md text-white">Add to
+                        <button id="visible-card" class="cursor-pointer bg-orange-400 px-5 py-3 rounded-md text-white">Add to
                             cart</button>
 
 
@@ -127,6 +127,58 @@
 
         </section>
     </main>
+ 
+    <!-- popup -->
+     <div id="popup" class="popup w-full h-[100vh] flex items-center justify-center absolute top-0 bg-[rgba(218,218,218,0.5)] hidden">
+
+        <div class="w-3xl m-auto bg-gray-100 p-5 rounded-md">
+           <div class="flex justify-between">
+            <h2>Your Cart</h2>
+
+            <div><i id="close-popup" class="fa-solid fa-xmark"></i></div>
+           </div>
+           <table class="table w-full">
+            <thead class="font-bold border-b">
+                <tr>
+                    <td class="p-4 table-cell">Item</td>
+                    <td class="p-4 table-cell">Color</td>
+                    <td class="p-4 table-cell">Size</td>
+                    <td class="p-4 table-cell">Quantity</td>
+                    <td class="p-4 table-cell">Price</td>
+                </tr>
+            </thead>
+            <tbody class="border-b">
+
+                <tr>
+                    <td class="p-4 flex gap-2 items-center"><img class="w-[50px] h-[50px]" src="assets/1.jpg" alt=""> Summer trendy Fotua for men</td>
+                    <td class="p-4">Purple</td>
+                    <td class="p-4">M</td>
+                    <td class="p-4">2</td>
+                    <td class="p-4">140</td>
+                    
+                </tr>
+
+            </tbody>
+
+            <tfoot>
+                  <tr>
+                    <td class="p-4" colspan="3">Total</td>
+                    <td class="p-4">2</td>
+                    <td class="p-4">140</td>
+                  </tr>
+            </tfoot>
+           </table>
+
+
+           <div class="flex gap-5 justify-end">
+            <button class=" text-white bg-[#a0a0a0] py-3 px-5 rounded-lg">Continue Shopping </button>
+           <button class=" text-white bg-[#ceb8ab] py-3 px-5 rounded-lg">Checkout </button>
+
+           </div>
+        </div>
+       
+    </div> 
+    <!-- popup -->
 
 
     <script src="js/main.js"></script>
