@@ -33,7 +33,7 @@
             <div class="cart-content-wrapper grid lg:grid-cols-2 gap-8 ">
 
                 <div class="">
-                    <img id="product-img" class="w-full h-[570px] rounded-lg" src="assets/ash.jpg" alt="">
+                    <img id="product-img" class="object-cover w-full h-[300px] sm:h-[500px] rounded-lg" src="assets/ash.jpg" alt="">
                 </div>
 
                 <div class="space-y-5">
@@ -131,13 +131,13 @@
     <!-- popup -->
      <div id="popup" class="popup w-full h-[100vh] flex items-center justify-center absolute top-0 bg-[rgba(218,218,218,0.5)] hidden">
 
-        <div class="w-3xl m-auto bg-gray-100 p-5 rounded-md">
+        <div class=" w-[300px] sm:w-3xl m-auto bg-gray-100 p-5 rounded-md">
            <div class="flex justify-between">
             <h2>Your Cart</h2>
 
             <div><i id="close-popup" class="fa-solid fa-xmark"></i></div>
            </div>
-           <table class="table w-full">
+           <table class="min-w-full overflow-auto">
             <thead class="font-bold border-b">
                 <tr>
                     <td class="p-4 table-cell">Item</td>
