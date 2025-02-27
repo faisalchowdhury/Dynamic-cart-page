@@ -28,7 +28,7 @@ for (let color of colors){
 
         const id  = event.target.id;
        
-        document.getElementById('product-img').src = `../assets/${id}.jpg`
+        document.getElementById('product-img').src = `./assets/${id}.jpg`
         event.target.classList.add('border-5')
         
       
