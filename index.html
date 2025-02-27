@@ -5,14 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- google font -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <style>
+        .poppins-regular {
+            font-family: "Poppins", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
 </head>
 </head>
 
-<body>
+<body class="poppins-regular">
 
     <main class="min-h-dvh my-10">
         <section class="max-w-lg md:max-w-4xl mx-auto">
@@ -23,7 +38,7 @@
                 </div>
 
                 <div class="space-y-5">
-                    <h1 class="text-3xl font-bold">Summer trendy Fotua for men </h1>
+                    <h1 class="text-3xl font-semibold">Summer trendy Fotua for men </h1>
 
                     <div class="rating text-sm">
                         <span class="text-orange-400">
@@ -40,31 +55,32 @@
 
                     <div class="text-xl font-semibold"><span class="text-gray-400 line-through">$99.00 </span> $70.00
                     </div>
-                    
-                    <p class="text-sm text-gray-600">Stay stylish this summer with our trendy Fotua for men, crafted from breathable fabric for
+
+                    <p class="text-sm text-gray-600">Stay stylish this summer with our trendy Fotua for men, crafted
+                        from breathable fabric for
                         ultimate comfort and a fashionable look.</p>
                     </p>
-                     
-                    <div class="flex w-3/4">
-                       <div class="flex-1">
-                         
-                        <p class="font-bold">Category :</p>
-                       
-                       </div>
-                       <div class="flex-1">
-                        
-                        <p>Men, Clothing , Summer</p>
 
-                       </div>
+                    <div class="flex w-3/4">
+                        <div class="flex-1">
+
+                            <p class="font-bold">Category :</p>
+
+                        </div>
+                        <div class="flex-1">
+
+                            <p>Men, Clothing , Summer</p>
+
+                        </div>
                     </div>
 
                     <div class="color-wrapper space-y-3">
                         <p class="font-bold">Color</p>
                         <div class="colors">
-                           <span class="w-6 h-6 bg-[#16232B] inline-block rounded-full"></span>
-                           <span class="w-6 h-6 bg-[#727070] inline-block rounded-full"></span>
-                           <span class="w-6 h-6 bg-[#EDEBDF] inline-block rounded-full"></span>
-                           <span class="w-6 h-6 bg-[#D7D7DE] inline-block rounded-full"></span>
+                            <span class="w-6 h-6 bg-[#16232B] inline-block rounded-full"></span>
+                            <span class="w-6 h-6 bg-[#727070] inline-block rounded-full"></span>
+                            <span class="w-6 h-6 bg-[#EDEBDF] inline-block rounded-full"></span>
+                            <span class="w-6 h-6 bg-[#D7D7DE] inline-block rounded-full"></span>
                         </div>
 
                     </div>
@@ -73,28 +89,31 @@
                     <div class="space-y-3">
                         <p class="font-bold">Size</p>
 
-                        <span class="inline-block p border-1 border-gray-400 py-1 px-5 rounded-sm" >S - $65</span>
-                        <span class="inline-block p border-1 border-gray-400 py-1 px-5 rounded-sm" >M - $67</span>
-                        <span class="inline-block p border-1 border-gray-400 py-1 px-5 rounded-sm" >L - $69</span>
-                        <span class="inline-block p border-1 border-gray-400 py-1 px-5 rounded-sm" >XL - $70</span>
+                        <span class="inline-block p border-1 border-gray-400 py-1 px-5 rounded-sm">S - $65</span>
+                        <span class="inline-block p border-1 border-gray-400 py-1 px-5 rounded-sm">M - $67</span>
+                        <span class="inline-block p border-1 border-gray-400 py-1 px-5 rounded-sm">L - $69</span>
+                        <span class="inline-block p border-1 border-gray-400 py-1 px-5 rounded-sm">XL - $70</span>
                     </div>
 
                     <div class="quentity-action flex items-center gap-3">
-                       <div class="counter px-5 py-2 border-1 border-gray-400 rounded-sm space-x-4 text-xl cursor-pointer" >
-                        <span>-</span>
-                        <span>0</span>
-                        <span>+</span>
-                       </div>
+                        <div
+                            class="counter px-5 py-2 border-1 border-gray-400 rounded-sm space-x-4 text-xl cursor-pointer">
+                            <span>-</span>
+                            <span>0</span>
+                            <span>+</span>
+                        </div>
 
-                       <button class="cursor-pointer bg-orange-400 px-5 py-3 rounded-md text-white">Add to cart</button> 
-                       
-                       
+                        <button class="cursor-pointer bg-orange-400 px-5 py-3 rounded-md text-white">Add to
+                            cart</button>
+
+
 
                     </div>
 
 
-                       <div class="text-center mt-4 hidden">
-                        <button class="w-full text-white bg-[#ceb8ab] py-3 px-5 rounded-lg">Checkout <span class="bg-white px-1  rounded-sm text-black">0</span></button>
+                    <div class="text-center mt-4 hidden">
+                        <button class="w-full text-white bg-[#ceb8ab] py-3 px-5 rounded-lg">Checkout <span
+                                class="bg-white px-1  rounded-sm text-black">0</span></button>
                     </div>
                 </div>
 
@@ -106,7 +125,7 @@
             </div>
 
 
-         
+
         </section>
     </main>
 
