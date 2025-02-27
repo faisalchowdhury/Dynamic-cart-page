@@ -1,11 +1,13 @@
 // popup
 document.getElementById('visible-card').addEventListener('click',function(){
     document.getElementById('popup').classList.remove('hidden');
-    document.querySelector('body').classList.add('overflow-hidden');
+    document.querySelector('body').classList.add('fixed');
+    document.querySelector('body').classList.add('w-full');
 })
 document.getElementById('close-popup').addEventListener('click',function(){
     document.getElementById('popup').classList.add('hidden');
-    document.querySelector('body').classList.remove('overflow-hidden');
+    document.querySelector('body').classList.remove('fixed');
+    document.querySelector('body').classList.remove('w-full');
 })
 
 // color selection
@@ -23,8 +25,13 @@ for (let color of colors){
             colors[i].classList.remove('border-5')
 
         }
-    
+
+        const id  = event.target.id;
+       
+        document.getElementById('product-img').src = `../assets/${id}.jpg`
         event.target.classList.add('border-5')
+        
+      
 
     })
 
