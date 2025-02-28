@@ -100,11 +100,29 @@ document.getElementById('view-checkout').addEventListener('click',function(){
             price : quantity * price ,
         });
 
-         console.log(cartList);
+       
 
-        
+    // viewing items 
 
 
+     const tbody = document.getElementById('cart-items');
+
+     let tr = document.createElement('tr');
+
+    for(let cart of cartList){
+     
+
+        tr.innerHTML = `
+        <td class="p-4 flex gap-2 rounded-md items-center"><img class="w-[50px] h-[50px]" src="assets/${cart.image}" alt="">${cart.title}</td>
+        <td class="p-4">${cart.color}</td>
+        <td class="p-4">${cart.size}</td>
+        <td class="p-4">${cart.quantity}</td>
+        <td class="p-4">${cart.price}</td>
+ `
+
+    }
+
+    tbody.appendChild(tr);
 
         
     }
