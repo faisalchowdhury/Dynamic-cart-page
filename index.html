@@ -88,18 +88,18 @@
                     <div class="space-y-3">
                         <p class="font-bold">Size</p>
 
-                        <span class="inline-block p border-1 border-gray-400 py-1 px-5 rounded-sm">S - $65</span>
-                        <span class="inline-block p border-1 border-gray-400 py-1 px-5 rounded-sm">M - $67</span>
-                        <span class="inline-block p border-1 border-gray-400 py-1 px-5 rounded-sm">L - $69</span>
-                        <span class="inline-block p border-1 border-gray-400 py-1 px-5 rounded-sm">XL - $70</span>
+                        <span id="size" class="border-2 cursor-pointer select-none inline-block p border-1 border-gray-200 py-1 px-5 rounded-sm">S - $65</span>
+                        <span id="size" class="border-2 cursor-pointer select-none inline-block p border-1 border-gray-200 py-1 px-5 rounded-sm">M - $67</span>
+                        <span id="size" class="border-2 cursor-pointer select-none inline-block p border-1 border-gray-200 py-1 px-5 rounded-sm">L - $69</span>
+                        <span id="size" class="border-2 cursor-pointer select-none inline-block p border-1 border-gray-200 py-1 px-5 rounded-sm">XL - $70</span>
                     </div>
 
                     <div class="quentity-action flex items-center gap-3">
                         <div
-                            class="counter px-5 py-2 border-1 border-gray-400 rounded-sm space-x-4 text-xl cursor-pointer">
-                            <span>-</span>
-                            <span>0</span>
-                            <span>+</span>
+                            class="counter px-5 py-2 border-1 border-gray-400 rounded-sm space-x-4 text-xl ">
+                            <button class="cursor-pointer" id="less">-</button>
+                            <span id="quantity">0</span>
+                            <button class="cursor-pointer" id="plus">+</button>
                         </div>
 
                         <button id="visible-card" class="cursor-pointer bg-orange-400 px-5 py-3 rounded-md text-white">Add to

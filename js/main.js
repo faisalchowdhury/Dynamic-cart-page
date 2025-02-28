@@ -36,3 +36,46 @@ for (let color of colors){
     })
 
 }
+
+// Quantity Update
+
+document.getElementById('plus').addEventListener('click',function(){
+    
+    const oldQuantity = parseInt(document.getElementById('quantity').innerText);
+
+    document.getElementById('quantity').innerText = oldQuantity + 1;
+
+
+});
+
+document.getElementById('less').addEventListener('click',function(){
+    
+    const oldQuantity = parseInt(document.getElementById('quantity').innerText);
+
+   if(oldQuantity > 0){
+    document.getElementById('quantity').innerText = oldQuantity - 1;
+   }
+
+
+});
+
+
+//Size selection
+
+const sizes = document.querySelectorAll('#size');
+
+for(let size of sizes){
+    
+    size.addEventListener('click' , function(event){
+
+
+        for(let i = 0 ;i < sizes.length; i++){
+            sizes[i].classList.remove('border-black');
+            sizes[i].classList.add('border-gray-200');
+        }
+
+        event.target.classList.remove('border-gray-200');
+        event.target.classList.add('border-black');
+    })
+
+}
