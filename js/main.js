@@ -77,12 +77,18 @@ document.getElementById('view-checkout').addEventListener('click',function(){
     
     let quantity = parseInt(document.getElementById('quantity').innerText)
     if(quantity > 0){
+
+
+
+
         document.getElementById('visible-card').classList.remove('hidden');
 
         document.getElementById('checkout-quantity').innerText = quantity;
 
 
         let productColor  = document.querySelector('.color-fetch').id;
+
+       
 
         productImage = productColor + '.jpg';
 
@@ -117,7 +123,7 @@ document.getElementById('view-checkout').addEventListener('click',function(){
         <td class="p-4">${cart.color}</td>
         <td class="p-4">${cart.size}</td>
         <td class="p-4">${cart.quantity}</td>
-        <td class="p-4">${cart.price}</td>
+        <td class="p-4">$${cart.price}</td>
  `
 
     }
@@ -141,6 +147,11 @@ document.getElementById('visible-card').addEventListener('click',function(){
     document.querySelector('body').classList.add('w-full');
 })
 document.getElementById('close-popup').addEventListener('click',function(){
+    document.getElementById('popup').classList.add('hidden');
+    document.querySelector('body').classList.remove('fixed');
+    document.querySelector('body').classList.remove('w-full');
+})
+document.getElementById('continue-shopping').addEventListener('click',function(){
     document.getElementById('popup').classList.add('hidden');
     document.querySelector('body').classList.remove('fixed');
     document.querySelector('body').classList.remove('w-full');
