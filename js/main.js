@@ -132,6 +132,8 @@ document.getElementById('view-checkout').addEventListener('click',function(){
      const tbody = document.getElementById('cart-items');
 
      let tr = document.createElement('tr');
+     let totalPrice = 0;
+     let totalQuantity = 0;
 
     for(let cart of cartList){
      
@@ -143,10 +145,16 @@ document.getElementById('view-checkout').addEventListener('click',function(){
         <td class="p-4">${cart.quantity}</td>
         <td class="p-4">$${cart.price}</td>
  `
+      
+       totalPrice += cart.price;
+       totalQuantity += cart.quantity
 
     }
+    
 
     tbody.appendChild(tr);
+    document.getElementById('total-price').innerHTML = '$' + totalPrice
+    document.getElementById('total-quantity').innerHTML =  totalQuantity
 
 
   
