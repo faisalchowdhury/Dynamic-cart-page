@@ -4,6 +4,12 @@
 const colors = document.getElementsByClassName('choose-color');
 
 
+// default color settled
+document.getElementById('product-img').src = `./assets/${colors[0].id}.jpg`
+colors[0].classList.add('border-5', 'border-purple-700','color-fetch')
+// default color settled
+
+
 for (let color of colors){
 
     color.addEventListener('click' , function(event){
@@ -11,15 +17,16 @@ for (let color of colors){
 
         for(i = 0;i < colors.length ; i++){
 
-            colors[i].classList.remove('border-5','color-fetch')
+            colors[i].classList.remove('border-5','border-purple-700','color-fetch')
 
         }
 
         const id  = event.target.id;
        
         document.getElementById('product-img').src = `./assets/${id}.jpg`
-        event.target.classList.add('border-5','color-fetch')
+        event.target.classList.add('border-5', 'border-purple-700','color-fetch')
         
+
       
 
     })
@@ -59,12 +66,12 @@ for(let size of sizes){
 
 
         for(let i = 0 ;i < sizes.length; i++){
-            sizes[i].classList.remove('border-black', 'selected-size');
+            sizes[i].classList.remove('border', 'border-purple-700' , 'selected-size');
             sizes[i].classList.add('border-gray-200');
         }
 
         event.target.classList.remove('border-gray-200');
-        event.target.classList.add('border-black' , 'selected-size');
+        event.target.classList.add('border' , 'border-purple-700' , 'selected-size');
     })
 
 }
@@ -80,8 +87,13 @@ document.getElementById('view-checkout').addEventListener('click',function(){
 
 
 
+        //removing warning
+        document.getElementById('quantity-warn').innerHTML = " ";
+        //removing warning
 
-        document.getElementById('visible-card').classList.remove('hidden');
+       
+          
+    
 
         document.getElementById('checkout-quantity').innerText = quantity;
 
@@ -89,13 +101,19 @@ document.getElementById('view-checkout').addEventListener('click',function(){
         let productColor  = document.querySelector('.color-fetch').id;
 
        
-
         productImage = productColor + '.jpg';
 
-        let priceSize =  document.querySelector('.selected-size').innerText;
-        let price = parseFloat(priceSize.split('-')[1].split('$')[1])
-        let size = priceSize.split('-')[0];
+        if(document.querySelector('.selected-size')){
 
+            //removing size warning
+            document.getElementById('size-warn').innerHTML = ' ';
+            //removing size warning
+
+            let priceSize =  document.querySelector('.selected-size').innerText;
+            let price = parseFloat(priceSize.split('-')[1].split('$')[1])
+            let size = priceSize.split('-')[0];
+            
+   
         
         cartList.push({
             image : productImage,
@@ -130,7 +148,25 @@ document.getElementById('view-checkout').addEventListener('click',function(){
 
     tbody.appendChild(tr);
 
-        
+
+  
+    // Showing the Checkout button
+    document.getElementById('visible-card').classList.remove('hidden');
+    // Showing the Checkout button
+    
+    
+  }else{
+   
+   document.getElementById('size-warn').innerHTML = `<p  class="text-yellow-700 bg-yellow-100 p-2 rounded-sm">Select a size to add to cart !!! </p>`
+
+
+  }
+
+    
+    }else {
+
+        document.getElementById('quantity-warn').innerHTML = `<p  class="text-red-700 bg-red-100 p-2 rounded-sm">You must need to select any item to add to cart !!! </p>`
+
     }
 
 

@@ -94,6 +94,10 @@
                         <span id="size" class="border-2 cursor-pointer select-none inline-block p border-1 border-gray-200 py-1 px-5 rounded-sm">XL - $70</span>
                     </div>
 
+                    <div id="size-warn">
+                       
+                    </div>
+
                     <div class="quentity-action flex items-center gap-3">
                         <div
                             class="counter px-5 py-2 border-1 border-gray-400 rounded-sm space-x-4 text-xl ">
@@ -114,6 +118,9 @@
                         <button id="visible-card" class="hidden w-full text-white bg-[#ceb8ab] py-3 px-5 rounded-lg">Checkout <span id="checkout-quantity"
                                 class="bg-white px-1  rounded-sm text-black">0</span></button>
                     </div>
+                    <div id="quantity-warn">
+                    
+                    </div> 
                 </div>
 
 
@@ -137,32 +144,35 @@
 
             <div><i id="close-popup" class="fa-solid fa-xmark"></i></div>
            </div>
-           <table class="min-w-full overflow-auto">
-            <thead class="font-bold border-b">
-                <tr>
-                    <td class="p-4 table-cell">Item</td>
-                    <td class="p-4 table-cell">Color</td>
-                    <td class="p-4 table-cell">Size</td>
-                    <td class="p-4 table-cell">Quantity</td>
-                    <td class="p-4 table-cell">Price</td>
-                </tr>
-            </thead>
-            <tbody id="cart-items" class="border-b">
+          
+           <div class="overflow-auto">
+            <table class="min-w-full">
+                <thead class="font-bold border-b">
+                    <tr>
+                        <td class="p-4 table-cell">Item</td>
+                        <td class="p-4 table-cell">Color</td>
+                        <td class="p-4 table-cell">Size</td>
+                        <td class="p-4 table-cell">Quantity</td>
+                        <td class="p-4 table-cell">Price</td>
+                    </tr>
+                </thead>
+                <tbody id="cart-items" class="border-b">
+    
+    
+                </tbody>
+    
+                <tfoot>
+                      <tr>
+                        <td class="p-4" colspan="3">Total</td>
+                        <td class="p-4">2</td>
+                        <td class="p-4">140</td>
+                      </tr>
+                </tfoot>
+               </table>
+    
+           </div>
 
-
-            </tbody>
-
-            <tfoot>
-                  <tr>
-                    <td class="p-4" colspan="3">Total</td>
-                    <td class="p-4">2</td>
-                    <td class="p-4">140</td>
-                  </tr>
-            </tfoot>
-           </table>
-
-
-           <div class="flex gap-5 justify-end">
+           <div class="flex gap-5 justify-end mt-5">
             <button id="continue-shopping" class=" text-white bg-[#a0a0a0] py-3 px-5 rounded-lg">Continue Shopping </button>
            <button id="" onclick="alert('are you ready to checkout ?')" class=" text-white bg-[#ceb8ab] py-3 px-5 rounded-lg">Checkout </button>
 
